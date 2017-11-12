@@ -1,0 +1,23 @@
+{
+	"name": "mithril-tsx",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "webpack-dev-server -d --open --content-base src/",
+		"build": "webpack -p"
+	},
+	"keywords": [],
+	"author": "Ardian Shala",
+	"license": "MIT",
+	"dependencies": {
+		"@types/mithril": "1.1.11",
+		"mithril": "1.1.5"
+	},
+	"devDependencies": {
+		"ts-loader": "3.1.1",
+		"typescript": "2.6.1",
+		"webpack": "2.6.1",
+		"webpack-dev-server": "2.9.4"
+	}
+}
