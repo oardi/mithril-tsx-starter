@@ -6,3 +6,6 @@ Take a look into app.tsx and helloworld.tsx
 Usage:
 * `npm install`
 * `npm run dev`
+
+Build:
+* `npm run build`
