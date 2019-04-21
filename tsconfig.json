@@ -1,9 +1,10 @@
 {
+	"compileOnSave": false,
 	"compilerOptions": {
 		"target": "es5",
 		"module": "commonjs",
 		"lib": [
-			"es2015",
+			"es2017",
 			"dom"
 		],
 		"noImplicitAny": false,
@@ -16,8 +17,8 @@
 		"sourceMap": true,
 		"strictNullChecks": true,
 		"noImplicitThis": true,
-        "experimentalDecorators": true,
-        "jsx": "react",
-        "jsxFactory": "m"
+		"experimentalDecorators": true,
+		"jsx": "react",
+		"jsxFactory": "m"
 	}
 }

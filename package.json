@@ -1,23 +1,40 @@
 {
 	"name": "mithril-tsx",
 	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
+	"description": "mithril typescript tsx starter template",
 	"scripts": {
-		"dev": "webpack-dev-server -d --open --content-base src/",
-		"build": "webpack -p"
+		"start": "webpack-dev-server --mode development --open",
+		"build": "webpack --mode development",
+		"build:prod": "webpack --mode production"
 	},
 	"keywords": [],
 	"author": "Ardian Shala",
 	"license": "MIT",
 	"dependencies": {
-		"@types/mithril": "1.1.11",
-		"mithril": "1.1.5"
+		"@types/mithril": "1.1.16",
+		"@types/node": "^11.13.6",
+		"bootstrap": "^4.3.1",
+		"mithril": "1.1.6",
+		"mithril-tsx-component": "^3.0.1"
 	},
 	"devDependencies": {
-		"ts-loader": "3.1.1",
-		"typescript": "2.6.1",
-		"webpack": "2.6.1",
-		"webpack-dev-server": "2.9.4"
+		"clean-webpack-plugin": "^1.0.0",
+		"copy-webpack-plugin": "^4.6.0",
+		"css-loader": "1.0.1",
+		"file-loader": "2.0.0",
+		"html-webpack-plugin": "3.2.0",
+		"mini-css-extract-plugin": "0.4.4",
+		"node-sass": "4.10.0",
+		"optimize-css-assets-webpack-plugin": "^5.0.1",
+		"postcss-loader": "3.0.0",
+		"sass-loader": "7.1.0",
+		"style-loader": "0.23.1",
+		"ts-loader": "5.3.3",
+		"typescript": "3.4.4",
+		"uglifyjs-webpack-plugin": "^2.1.2",
+		"webpack": "4.27.0",
+		"webpack-bundle-analyzer": "3.0.3",
+		"webpack-cli": "3.1.2",
+		"webpack-dev-server": "3.1.14"
 	}
 }
