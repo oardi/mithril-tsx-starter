@@ -5,11 +5,8 @@ import './style.scss';
 
 export class App {
 
-	childCount: number = 0;
-
 	onChildClicked(e: number) {
-		this.childCount = e;
-		console.warn(this.childCount);
+		console.warn('callback from parent triggered', e);
 	}
 
 	view() {
