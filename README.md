@@ -1,7 +1,7 @@
 # MithrilJs Typescript TSX Webpack Template
 
 MithrilJs Typescript Template with TSX Support, SCSS and Webpack 4.
-Take a look into app.tsx and helloworld.tsx 
+Take a look into app.tsx and button-counter.tsx 
 
 ## Usage
 * `npm install`

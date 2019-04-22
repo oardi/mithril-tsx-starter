@@ -57,10 +57,10 @@ module.exports = (env, argv) => {
             new CleanWebpackPlugin(['dist']),
             new HtmlWebpackPlugin({
                 template: "./index.html",
-                title: 'MY TITLE (TODO - customize through JSON)',
+                title: 'Mithril TSX Template',
                 filename: "index.html",
                 chunksSortMode: "manual",
-                chunks: ['polyfills', 'vendors', 'app'],
+                chunks: ['vendors', 'app'],
                 favicon: 'favicon.ico'
             }),
             new MiniCssExtractPlugin({
