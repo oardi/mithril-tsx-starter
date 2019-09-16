@@ -13,7 +13,7 @@ export class ButtonCounter extends MithrilTsxComponent<IAttrs> {
 	count: number = 0;
 
 	oncreate(v: VnodeDOM) {
-		console.warn('oncreate', v);
+		console.info('oncreate', v);
 	}
 
 	handleClick(onclickedHandler: Function) {

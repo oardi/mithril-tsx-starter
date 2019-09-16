@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = (env, argv) => {
 
@@ -54,7 +54,7 @@ module.exports = (env, argv) => {
         },
 
         plugins: [
-            new CleanWebpackPlugin(['dist']),
+            new CleanWebpackPlugin(),
             new HtmlWebpackPlugin({
                 template: "./index.html",
                 title: 'Mithril TSX Template',
