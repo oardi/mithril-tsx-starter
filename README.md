@@ -12,11 +12,11 @@ Take a look into app.tsx and button-counter.tsx
 * `npm run build:prod`
 
 ## Updated packages
-- mithril
+- mithril 2
 - mithril types
 - webpack 4
-- typescript 3
-- tsloader 5
+- typescript
+- tsloader
 
 ## Added packages
 - @types/node
@@ -29,7 +29,6 @@ Take a look into app.tsx and button-counter.tsx
 - mithril-tsx-component
 - node-sass
 - optimize-css-assets-webpack-plugin
-- postcss-loader
 - sass-loader
 - style-loader
 - ts-loader

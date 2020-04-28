@@ -1,8 +1,8 @@
-import * as m from 'mithril';
-import { MithrilTsxComponent } from 'mithril-tsx-component'
+import m from 'mithril';
+import { MithrilTsxComponent } from 'mithril-tsx-component';
 
-type Vnode = m.Vnode<IAttrs, ButtonCounter>
-type VnodeDOM = m.VnodeDOM<IAttrs, ButtonCounter>
+type Vnode = m.Vnode<IAttrs, ButtonCounter>;
+type VnodeDOM = m.VnodeDOM<IAttrs, ButtonCounter>;
 
 export interface IAttrs {
 	name: string;
@@ -25,7 +25,7 @@ export class ButtonCounter extends MithrilTsxComponent<IAttrs> {
 		return (
 			<button onclick={() => this.handleClick(vnode.attrs.onClicked)} class="btn btn-outline-secondary">
 				{vnode.attrs.name} - You clicked me {this.count} times
-    		</button>
+			</button>
 		);
 	}
 }

@@ -9,88 +9,87 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = (env, argv) => {
 
-    return {
-        context: path.resolve(__dirname, './src'),
-        entry: {
-            app: './app.tsx'
-        },
+	return {
+		context: path.resolve(__dirname, './src'),
 
-        output: {
-            filename: '[name].[contenthash].bundle.js',
-            chunkFilename: '[name].[contenthash].bundle.js',
-            path: path.resolve(__dirname, 'dist'),
-        },
+		entry: { app: './index.tsx' },
 
-        devtool: 'source-map',
+		output: {
+			filename: '[name].[contenthash].bundle.js',
+			chunkFilename: '[name].[contenthash].bundle.js',
+			path: path.resolve(__dirname, 'dist'),
+		},
 
-        resolve: { extensions: ['.ts', '.tsx', '.js', '.jsx'] },
+		devtool: 'source-map',
 
-        module: {
-            rules: [
-                { test: /\.tsx?$/, loader: 'ts-loader', options: { transpileOnly: true } },
-                {
-                    test: /\.scss$/,
-                    use: [
-                        MiniCssExtractPlugin.loader,
-                        "css-loader",
-                        "sass-loader"
-                    ]
-                },
-                { test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/, loader: 'file-loader?name=assets/[name].[ext]' },
-                {
-                    test: /\.(png|jpg|gif)$/,
-                    use: [
-                        {
-                            loader: 'file-loader',
-                            options: {
-                                name: '[name].[ext]',
-                                outputPath: 'assets/img',
-                                publicPath: 'assets/img'
-                            }
-                        }
-                    ]
-                }
-            ],
-        },
+		resolve: { extensions: ['.ts', '.tsx', '.js', '.jsx'] },
 
-        plugins: [
-            new CleanWebpackPlugin(),
-            new HtmlWebpackPlugin({
-                template: "./index.html",
-                title: 'Mithril TSX Template',
-                filename: "index.html",
-                chunksSortMode: "manual",
-                chunks: ['vendors', 'app'],
-                favicon: 'favicon.ico'
-            }),
-            new MiniCssExtractPlugin({
-                filename: "style.css",
-                chunkFilename: "style.css"
-            }),
-            new CopyWebpackPlugin([
-                // copy static assets here
-            ]),
-            new webpack.DefinePlugin({
-                // define environment vars here
-            })
-        ],
+		module: {
+			rules: [
+				{ test: /\.tsx?$/, loader: 'ts-loader', options: { transpileOnly: true } },
+				{
+					test: /\.scss$/,
+					use: [
+						MiniCssExtractPlugin.loader,
+						"css-loader",
+						"sass-loader"
+					]
+				},
+				{ test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/, loader: 'file-loader?name=assets/[name].[ext]' },
+				{
+					test: /\.(png|jpg|gif)$/,
+					use: [
+						{
+							loader: 'file-loader',
+							options: {
+								name: '[name].[ext]',
+								outputPath: 'assets/img',
+								publicPath: 'assets/img'
+							}
+						}
+					]
+				}
+			],
+		},
 
-        optimization: {
-            splitChunks: {
-                cacheGroups: {
-                    commons: { test: /[\\/]node_modules[\\/]/, name: "vendors", chunks: "all" }
-                }
-            },
-            minimizer: [
-                new UglifyJsPlugin({
-                    uglifyOptions: {
-                        output: {
-                            comments: false
-                        }
-                    }
-                }),
-                new OptimizeCSSAssetsPlugin({})
-            ]
-        }
-    }
+		plugins: [
+			new CleanWebpackPlugin(),
+			new HtmlWebpackPlugin({
+				template: "./index.html",
+				title: 'Mithril TSX Template',
+				filename: "index.html",
+				chunksSortMode: "manual",
+				chunks: ['vendors', 'app'],
+				favicon: 'favicon.ico'
+			}),
+			new MiniCssExtractPlugin({
+				filename: "style.css",
+				chunkFilename: "style.css"
+			}),
+			new CopyWebpackPlugin([
+				// copy static assets here
+			]),
+			new webpack.DefinePlugin({
+				// define environment vars here
+			})
+		],
+
+		optimization: {
+			splitChunks: {
+				cacheGroups: {
+					commons: { test: /[\\/]node_modules[\\/]/, name: "vendors", chunks: "all" }
+				}
+			},
+			minimizer: [
+				new UglifyJsPlugin({
+					uglifyOptions: {
+						output: {
+							comments: false
+						}
+					}
+				}),
+				new OptimizeCSSAssetsPlugin({})
+			]
+		}
+	}
 }

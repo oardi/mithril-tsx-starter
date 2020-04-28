@@ -1,5 +1,5 @@
-import * as m from 'mithril';
-import { ButtonCounter } from './app/button-counter';
+import m from 'mithril';
+import { ButtonCounter } from './app/ButtonCounter';
 
 import './style.scss';
 
@@ -16,12 +16,10 @@ export class App {
 
 				<p>
 					Simple Mithril Typescript TSX Template with a custom ButtonCounter Component.
-      			</p>
+				</p>
 
 				<ButtonCounter name="Mithril TSX" onClicked={(e) => this.onChildClicked(e)} />
 			</div>
-		)
+		);
 	}
 }
-
-m.mount(document.body as HTMLElement, App);
