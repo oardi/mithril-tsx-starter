@@ -1,7 +1,7 @@
 {
 	"name": "mithril-tsx",
 	"version": "1.0.0",
-	"description": "mithril typescript tsx starter template",
+	"description": "mithril tsx starter template",
 	"scripts": {
 		"start": "webpack-dev-server --mode development --open",
 		"build": "webpack --mode development",
