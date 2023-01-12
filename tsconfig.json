@@ -1,17 +1,14 @@
 {
 	"compileOnSave": false,
 	"compilerOptions": {
+		"allowJs": true,
 		"allowSyntheticDefaultImports": true,
 		"jsx": "react",
 		"jsxFactory": "m",
-		"lib": [
-			"dom",
-			"dom.iterable",
-			"esnext"
-		],
-		"module": "esnext",
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"module": "CommonJS",
 		"moduleResolution": "node",
 		"sourceMap": true,
-		"target": "es5"
+		"target": "es6"
 	}
 }
