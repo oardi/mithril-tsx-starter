@@ -5,6 +5,7 @@
 		"allowSyntheticDefaultImports": true,
 		"jsx": "react",
 		"jsxFactory": "m",
+		"jsxFragmentFactory": "m.Fragment",
 		"lib": ["dom", "dom.iterable", "esnext"],
 		"module": "CommonJS",
 		"moduleResolution": "node",
